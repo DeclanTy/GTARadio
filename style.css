@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Libre', 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(128,128,128);
+    
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    /* -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+    
+  }
+.shadow{
+
+    box-shadow: inset 10px 10px 100px rgba(128,128,128,0.99);
+  }
+  img { 
+height: 520px;
+width: 360px;
+object-fit: cover;
+    position: relative;
+    z-index: -2;
+    border: solid;
+    
+    
+  }
+
+.music-container{
+    background-color: transparent;
+    border-radius: 15px;
+    
+    display: flex;
+    padding:20px 30px;
+    position: relative;
+    margin: -100px 0;
+    z-index: 10;
+}
+
+.img-container img{
+    width: inherit;
+    height: inherit;
+    border-radius:100%;
+    
+    
+
+
+    position: relative;
+    width: 110px;
+    height:110px;
+    filter: brightness()invert(1);
+    /* filter: brightness(1) invert(1); */
+    /*for modded colour use*/
+
+    /* border-style: solid;
+    border-color: rgb(51,187,224,255);
+    border-radius: 100%;
+    border-width: 4px; */
+    filter: grayscale(100);
+
+}
+.wrapper{
+    border-style: solid;
+    border-color: rgb(51,187,224,255);
+    border-radius: 100%;
+    border-width: 4px;
+
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+
+}
+.action-btn{
+    background-color: transparent;
+    border:0;
+    color: grey;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+.action-btn-big{
+    color:#cdc2d0;
+    font-size: 30px;
+
+}
+.action-btn:focus{
+outline: 0;
+}
+.music-info{
+    background-color: transparent;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top:0;
+    left:20px;
+    width:calc(100% - 40px);
+    opacity: 0;
+    transform: translateY(0%);
+    padding:10px 10px 10px 150px;
+    opacity: 0;
+    transition: transform 0.3s ease-in opacity 0.3s ease-in;
+}
+.music-info h4{
+    margin:0;
+}
+.music-container.play .music-info{
+    opacity: 1;
+    transform: translateY(170%);
+
+}
+.progress-container{
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:10px 0;
+    height: 4px;
+    width: 100%;
+
+}
+.progress{
+    background-color: black;
+    border-radius: 5px;
+    height:100%;
+    width:0%;
+    transition: width 0.1s linear;
+
+}
+footer{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    height: 75px;
+    width:100%;
+    display: flex;
+    
+    
+    
+}
+footer p{
+    color: white;
+    padding-right: 100%;
+
+}
+footer .img{
+
+height: 500px;
+
+    position: relative;
+    z-index: -2;
+    border: solid;
+}
+
+#profile{
+    height: 75px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* .shadow{
+   
+    
+    
+    background-size: cover;
+} */
+
+header{
+    padding-top: 50px;
+}
+
